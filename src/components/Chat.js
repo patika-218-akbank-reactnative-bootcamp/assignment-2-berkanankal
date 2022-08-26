@@ -1,11 +1,4 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  TouchableOpacity,
-  Button,
-} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 
 const Chat = ({navigation, item}) => {
@@ -14,7 +7,14 @@ const Chat = ({navigation, item}) => {
       style={styles.chat}
       onPress={() => navigation.navigate('Messages', item)}>
       <View style={styles.chatImage}>
-        <Image />
+        <Image
+          source={{
+            uri: 'https://reactnative.dev/img/tiny_logo.png',
+            headers: {
+              Accept: '*/*',
+            },
+          }}
+        />
       </View>
       <View style={styles.chatTextContainer}>
         <Text style={styles.textHeader}>
@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
   chatImage: {
     width: 70,
     height: 70,
-    backgroundColor: 'blue',
     borderRadius: 70,
+    borderWidth: 1,
   },
   chatTextContainer: {
     flexDirection: 'column',

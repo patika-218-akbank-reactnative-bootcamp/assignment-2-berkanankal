@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {FlatList} from 'react-native';
 import Chat from './Chat';
 
 const data = [
@@ -45,21 +45,59 @@ const data = [
       },
     ],
   },
+  {
+    id: 4,
+    firstName: 'Yıldırım',
+    lastName: 'Koç',
+    messages: [
+      {
+        text: 'Okey.',
+      },
+      {
+        text: 'Anladım.',
+      },
+      {
+        text: 'Görüşürüz.',
+      },
+    ],
+  },
+  {
+    id: 5,
+    firstName: 'Metin',
+    lastName: 'Yıldırım',
+    messages: [
+      {
+        text: 'Yarın orada olalım.',
+      },
+      {
+        text: 'Tamam mıdır?',
+      },
+    ],
+  },
+  {
+    id: 6,
+    firstName: 'Metin',
+    lastName: 'Yıldırım',
+    messages: [
+      {
+        text: 'Selam söyle.',
+      },
+      {
+        text: 'Görüşürüz.',
+      },
+    ],
+  },
 ];
 
 const ChatList = ({navigation}) => {
   return (
-    <View>
-      <FlatList
-        data={data}
-        renderItem={({item}) => <Chat navigation={navigation} item={item} />}
-        keyExtractor={item => item.id}
-        // extraData={selectedId}
-      />
-    </View>
+    <FlatList
+      data={data}
+      renderItem={({item}) => <Chat navigation={navigation} item={item} />}
+      keyExtractor={item => item.id}
+      // extraData={selectedId}
+    />
   );
 };
 
 export default ChatList;
-
-const styles = StyleSheet.create({});
