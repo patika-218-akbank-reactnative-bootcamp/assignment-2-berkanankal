@@ -1,14 +1,13 @@
-import {StyleSheet, Text, View, Button} from 'react-native';
+import {StyleSheet, Text, View, Button, Image} from 'react-native';
 import React from 'react';
+import Header from './Header';
+import ChatList from './ChatList';
 
 const Home = props => {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Home Screen</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => props.navigation.navigate('Details')}
-      />
+    <View>
+      <Header />
+      <ChatList />
     </View>
   );
 };

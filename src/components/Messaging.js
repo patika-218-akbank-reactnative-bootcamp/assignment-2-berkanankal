@@ -1,14 +1,14 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-const Details = props => {
+const Messaging = () => {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Details Screen</Text>
+      <Text>Messaging Screen</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({});
 
-export default Details;
+export default Messaging;
