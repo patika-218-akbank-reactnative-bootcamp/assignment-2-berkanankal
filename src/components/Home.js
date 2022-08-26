@@ -3,11 +3,11 @@ import React from 'react';
 import Header from './Header';
 import ChatList from './ChatList';
 
-const Home = props => {
+const Home = ({navigation}) => {
   return (
     <View>
       <Header />
-      <ChatList />
+      <ChatList navigation={navigation} />
     </View>
   );
 };

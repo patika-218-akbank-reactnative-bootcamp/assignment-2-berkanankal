@@ -1,9 +1,18 @@
-import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Button,
+} from 'react-native';
 import React from 'react';
 
-const Chat = ({item}) => {
+const Chat = ({navigation, item}) => {
   return (
-    <TouchableOpacity style={styles.chat}>
+    <TouchableOpacity
+      style={styles.chat}
+      onPress={() => navigation.navigate('Messages', item)}>
       <View style={styles.chatImage}>
         <Image />
       </View>

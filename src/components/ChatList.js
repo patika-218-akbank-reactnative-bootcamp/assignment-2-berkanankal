@@ -47,12 +47,12 @@ const data = [
   },
 ];
 
-const ChatList = () => {
+const ChatList = ({navigation}) => {
   return (
     <View>
       <FlatList
         data={data}
-        renderItem={({item}) => <Chat item={item} />}
+        renderItem={({item}) => <Chat navigation={navigation} item={item} />}
         keyExtractor={item => item.id}
         // extraData={selectedId}
       />
